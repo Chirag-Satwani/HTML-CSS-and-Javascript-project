@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="assign1" />
+  <meta name="author" content="Chirag Satwani"  />
+  <meta name="description" content="get your dream IT job.">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Welcome to CS IT Solutions</title>
+  <script src="scripts/apply.js"></script>
+  <script src="scripts/enhancements.js"></script>
+
+</head>
+<body>
+  <section  class="header">
+    <nav> 
+        <a href="index.html" id="logo"> <img src="images/logo.png" alt="logo" height="200" width="200"  > </a>
+           <div  class="main-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancements2.html">Enhancements2</a></li>
+              </ul>
+           </div>
+       </nav>
+       <h1 id="h1_job">Job Application Form</h1>
+       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="form" onsubmit="return validateform();"  id="applicationForm">
+          
+        
+
+        <fieldset>
+          
+          <label for="jobRef">Job reference number:</label>
+          <input type="text" id="jobRef" name="jobRef" pattern="\d{5}" title="please enter exactly 5 numbers" required readonly>
+          <br>
+          <label for="first_name">First name:</label>
+          <input type="text" id="first_name" name="first_name" pattern="[a-zA-Z]{1-20}" title="please enter your name upto 20 characters" required >
+           <br>
+          <label for="last_name">Last name:</label>
+          <input type="text" id="last_name" name="first_name" pattern="[a-zA-Z]{1-20}" title="please enter your name upto 20 characters" required>
+           <br>
+          <label for="dob">Date of Birth:</label>
+          <input type="text" id="dob" name="dob" required>
+           <br>
+           <fieldset>
+             <legend>Gender:</legend>
+             <label for="male">Male</label>
+             <input type="radio" id="male" name="male" value="Male" required>
+             <label for="female">Female</label>
+             <input type="radio" id="female" name="female" value="female">
+             <label for="non_binary">Non Binary</label>
+             <input type="radio" id="non_binary" name="non_binary" value="non_binary">
+           </fieldset>
+            <br>
+           <label for="address">Street Address:</label>
+           <input type="text" id="address" name="address" pattern="^[0-9a-zA-Z]{1-40}$" required>
+            <br>
+           <label for="suburb">Suburb/Town:</label>
+           <input type="text" id="suburb" name="suburb" pattern="^[a-zA-Z]{1-40}$" required>
+             <br>
+           <label for="state">State</label>
+           <select name="state" id="state">
+              <option value="Select" selected>Select</option>
+              <option value="VIC">VIC</option>
+              <option value="NSW">NSW</option>
+              <option value="QLD">QLD</option>
+              <option value="NT">NT</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+            </select>
+            <br>
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" pattern="^[0-9]{1-4}$" required>
+             <br>
+             <label for="mail">Email address:</label>
+             <input type="email" id="mail" name="mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" required>
+             <br>
+             <label for="phone_no">Phone number:</label>
+             <input type="text" id="phone_no" name="phone_no" pattern="^[0-9]{8-10}$" required>
+             <br>
+             
+             <fieldset>
+              <legend>Skill list:</legend>
+                   <label for="basic_programming">Basic Programming concepts</label>
+                   <input type="checkbox" id="basic_programming" name="category[]" value="basic_programming" checked>
+
+                   <label for="java">Java</label>
+                   <input type="checkbox" id="java" name="category[]" value="java">
+
+                   <label for="adv_java">Advance Java</label>
+                   <input type="checkbox" id="adv_java" name="category[]" value="adv_java">
+
+                   <label for="python">Python</label>
+                   <input type="checkbox" id="python" name="category[]" value="python">
+
+                   <label for="other">Other skills</label>
+                   <input type="checkbox" id="other" name="category[]" value="other">
+
+             </fieldset>
+             <br>
+             <label for="other_skills">Describe your other skills:</label><br>
+             <textarea name="other_skills" id="other_skills" cols="30" rows="5" placeholder="describe your skills here....."></textarea>
+
+
+
+        </fieldset>
+        <div id="error-messages" class="error-messages"></div>
+
+        <input type="submit" value="Apply" />
+        <input type="reset" value="Reset Form"/>
+
+
+
+       </form>
+
+
+
+
+
+  </section>
+</body>
+</html>

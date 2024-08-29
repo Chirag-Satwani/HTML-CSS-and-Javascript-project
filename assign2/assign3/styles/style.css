@@ -1,0 +1,515 @@
+/*
+filename: style.css
+author: Chirag Satwani
+created: 27/08/2023
+last modified: 29/08/2023
+description: assign1
+*/
+
+*{
+    margin: 0;padding: 0;
+}
+
+.header{                     /*class selector used*/
+    background-attachment: fixed;
+    min-height: 100vh ;
+    width: 100%;
+    background-image: linear-gradient(rgb(13, 29, 66),rgba(70, 134, 194, 0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+   
+    
+}
+#footer1 {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: auto;
+    bottom: -50%;
+    left: 40%; 
+}
+
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.main-menu{
+    flex: 1;
+    text-align: right;
+}
+
+.main-menu ul li{
+     list-style: none;
+     display: inline-block;
+     position: relative;
+}
+
+.main-menu ul li{         /*contextual selector used*/
+    
+    text-decoration: none;
+    font-size: 30px;
+    border: 1px solid#ffffff;
+    transition: background-color 0.3s;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.main-menu a {
+    text-decoration: none;
+    color: #ffffff; /* This sets the color for the link within li */
+    
+}
+
+.main-menu ul li::after{          
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    transition: 0.5s;
+}
+.main-menu ul li :hover{      /*pseudo class used*/
+    background-color: #f44336;
+    transition: 1s;
+    padding: 20px;    /* This will change the position of the border when mouse moves over it*/
+}
+
+.main-menu ul li:hover::after{   /* pseudo element selector used*/
+    
+  
+    width: 100%;
+    height: 100%;
+    top: -6px;
+    left: -6px;
+    position: absolute;
+    transition: 1s;
+    
+    z-index: -1;
+     
+  
+}
+
+.text-box{
+    width: 90%;
+    color:#ffffff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 10s linear infinite;
+
+}
+@keyframes marquee{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+
+}
+.text-box h2{
+    font-size: 45px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+
+.mail-btn{
+    display:inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+.mail-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: border 1s, background 1s;
+
+}
+
+
+/* for Jobs.html css styles*/
+
+.table1{
+    padding: 10px;
+    border-style: solid;
+    border-color: #000000;
+    width: 80%;
+}
+.table1 td{
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #333;
+}
+.table1 ul li{
+    text-align: left;
+}
+
+
+.text-box-job{
+    color: #ffffff;
+    
+}
+.text-box-job h1{
+    
+        font: italic small-caps bold 24px/1.5 "Arial", sans-serif;         /*changed font style*/
+    
+    
+}
+
+.footer-job{
+    color: #ffffff;
+}
+aside{
+
+        width: 25%;         /*25% width*/
+        float: right;    /*float right as per requirement*/
+        border: 2px solid #7ec6d7; /* Coloured border */
+        margin: 20px; /* Appropriate margin */
+        padding: 10px; /* Appropriate padding */
+        background-color: #000000; 
+    
+}
+
+.footer-job{
+    
+        width: 100%;
+        background-color: #333; /* Background color for the footer */
+        color: #fff; /* Text color for the footer */
+        text-align: center; /* Center-align the text */
+        padding: 10px 0; /* Add padding to the top and bottom */
+        font-size: 12px; /* Small font size for the footer text */
+    
+    
+}
+
+
+
+#logo{                       /*used id */
+    border-radius: 25% ;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+h1,h2{                    /*group selector used*/
+    font-weight: bold;
+}
+
+#h1_job{
+    color: #fff;
+    font-weight: bold;
+}
+
+.form{
+    color: white;
+}
+
+
+
+
+/*about.html styles*/
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+dt {
+    flex: 0 0 100px; 
+    font-weight: bold;
+}
+dd {
+    flex: 1;
+}
+
+
+figure {
+    float: right;
+    margin: 0 0 20px 20px;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+
+table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    width: 100%;
+}
+table th, table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+table th {
+    font-weight: bold;
+    background-color: #000000; /* Background color for table headings */
+}
+
+/* Styling for the email link */
+.mail-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.mail-btn:hover {
+    background-color: #ae0000; 
+}
+
+#about{
+    color: white;
+}
+
+#enhancements{
+    color: #fff;
+}
+
+#marquee{
+    margin-top: auto;
+    padding: 20px;
+}
+
+.error-messages {
+    color: red;
+    margin-top: 10px;
+    display: inline; 
+  }
+  
+
+  .apply-button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .apply-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000; 
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .apply-button a:hover {
+    background-color: #2600ff; 
+  }
+
+
+  #myPlot {
+    position: absolute;
+    top: 150%; 
+    left: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+    bottom: 0%;
+    right: 50%;
+}
+  
+#enhancement2{
+   color: #fff;
+
+}
+#p2{
+    color: #fff;
+}
+
+
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: inline}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 200px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  
+
+/* Style for the slideshow container */
+.slideshow-container {
+    display: block; /* Ensure it's visible initially */
+    position: absolute;
+    bottom: -45%; /* Align at the bottom */
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    width: 80%;
+  }
+  
+  .mySlides {
+    display: none; 
+  }
+  
+  /* Style for slideshow buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%; /* Position vertically in the middle */
+    transform: translateY(-50%); /* Center vertically */
+    padding: 10px;
+    background-color: #333; /* Background color of the buttons */
+    color: #fff; /* Text color */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  
+  
+  /* Style for the active dot */
+  .active {
+    background-color: #333;
+  }
+  
+.tripledots{
+    text-align: center;
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+}
+
+
+
+
+  
+  
+  /* Style for the plot itself (you might need to adjust these styles) */
+  #myPlot img {
+    max-width: 100%; /* Ensure the plot image doesn't overflow the container */
+    display: block; /* Make sure it's a block-level element for centering */
+    margin: 0 auto; /* Center the plot image horizontally */
+    
+  }
+  
+  /* Style for the footer to ensure it's not obscured by the plot */
+  
+  #pp{
+    color: #f2f2f2;
+  }
